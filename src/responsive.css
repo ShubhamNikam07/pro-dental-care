@@ -1,0 +1,311 @@
+:root {
+  font-size: 17px;
+}
+
+body {
+  min-width: 320px;
+}
+
+.announcement {
+  font-size: 11px;
+}
+
+.brand-copy small {
+  font-size: 9px;
+}
+
+.nav-links > a,
+.text-link,
+.button {
+  font-size: 14px;
+}
+
+.eyebrow,
+.hero-caption,
+.scroll-cue {
+  font-size: 11px;
+}
+
+.hero-text,
+.approach-content > p:not(.lead),
+.dentists-copy > p:not(.eyebrow):not(.lead),
+.visit-copy > p:not(.eyebrow),
+.care-intro {
+  font-size: 16px;
+}
+
+.hero-note strong,
+.local-strip p,
+.service-card p,
+.doctor-profile small,
+.visit-detail p,
+.visit-detail a {
+  font-size: 14px;
+}
+
+.hero-note small,
+.local-strip-inner > a,
+.service-link,
+.care-disclaimer,
+.footer-bottom,
+.values-list small,
+.map-card-overlay small,
+.form-note,
+.map-decoration {
+  font-size: 13px;
+}
+
+.appointment-form label {
+  font-size: 14px;
+}
+
+.service-number {
+  font-size: 12px;
+}
+
+.section-pad {
+  scroll-margin-top: 86px;
+}
+
+.gallery-section {
+  background: var(--paper);
+}
+
+.gallery-intro {
+  max-width: 530px;
+  margin: 20px auto 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 50px;
+}
+
+.gallery-card {
+  min-width: 0;
+  margin: 0;
+}
+
+.gallery-card > img,
+.gallery-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 4px;
+  background: #e4eade;
+}
+
+.gallery-card > img {
+  object-fit: cover;
+}
+
+.gallery-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 22px;
+  color: #36584d;
+  text-align: center;
+}
+
+.gallery-placeholder span {
+  font-family: Georgia, serif;
+  font-size: 22px;
+}
+
+.gallery-placeholder small {
+  max-width: 240px;
+  color: #65756d;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.gallery-card figcaption {
+  padding-top: 12px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (max-width: 1050px) {
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links > a,
+  .button {
+    font-size: 13px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    height: 76px;
+  }
+
+  .mobile-menu {
+    display: grid;
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 16px 6% 22px;
+    border-top: 1px solid #e6e9e1;
+    background: var(--paper);
+    box-shadow: 0 18px 25px #153a2c12;
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+  }
+
+  .nav-links > a {
+    padding: 15px 0;
+    border-bottom: 1px solid #e7e9e2;
+    font-size: 16px;
+  }
+
+  .nav-cta {
+    align-self: flex-start;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .announcement {
+    min-height: 36px;
+    height: auto;
+    padding: 7px 12px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .brand-copy small {
+    font-size: 9px;
+  }
+
+  .hero .eyebrow,
+  .hero-caption,
+  .scroll-cue {
+    font-size: 11px;
+  }
+
+  .hero-text,
+  .approach-content > p:not(.lead),
+  .dentists-copy > p:not(.eyebrow):not(.lead),
+  .visit-copy > p:not(.eyebrow),
+  .care-intro,
+  .comfort-copy > p:not(.eyebrow) {
+    font-size: 16px;
+  }
+
+  .hero-note strong,
+  .local-strip p,
+  .service-card p,
+  .doctor-profile small,
+  .visit-detail p,
+  .visit-detail a {
+    font-size: 14px;
+  }
+
+  .hero-note small,
+  .local-strip-inner > a,
+  .service-link,
+  .care-disclaimer {
+    font-size: 13px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 11px;
+    margin-top: 34px;
+  }
+
+  .gallery-card figcaption {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 360px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card > img,
+  .gallery-placeholder {
+    aspect-ratio: 5 / 4;
+  }
+}
+
+/* Keep supporting copy comfortable to read across screen sizes. */
+.eyebrow,
+.announcement,
+.brand-copy small,
+.hero-caption,
+.scroll-cue,
+.service-number,
+.map-decoration {
+  font-size: 11px;
+}
+
+.hero-note strong,
+.hero-note small,
+.values-list small,
+.doctor-profile strong,
+.doctor-profile small,
+.visit-detail strong,
+.visit-detail p,
+.visit-detail a,
+.map-card-overlay strong,
+.map-card-overlay small,
+.modal-intro,
+.success-state > p:not(.eyebrow),
+.appointment-form label,
+.appointment-form input,
+.appointment-form select,
+.form-note,
+.optional,
+.footer-bottom {
+  font-size: 13px;
+}
+
+.local-strip p,
+.local-strip-inner > a,
+.approach-content > p:not(.lead),
+.dentists-copy > p:not(.eyebrow):not(.lead),
+.visit-copy > p:not(.eyebrow),
+.care-intro,
+.service-card p,
+.service-link,
+.care-disclaimer,
+.comfort-copy > p:not(.eyebrow),
+.footer > p {
+  font-size: 14px;
+}
+
+.button,
+.text-link,
+.nav-links > a {
+  font-size: 14px;
+}
