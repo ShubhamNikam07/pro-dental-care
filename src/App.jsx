@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { ArrowDownRight, ArrowRight, CalendarDays, Check, ChevronDown, Clock3, Heart, MapPin, Menu, Phone, ShieldCheck, Sparkles, Smile, Stethoscope, X } from 'lucide-react';
 import { closeAppointment, openAppointment, submitAppointment } from './features/appointment/appointmentSlice';
+import clinicCounter from '../photo/clinic counter.jpeg';
+import dentalMachine from '../photo/machine.jpeg';
+import dentistWithPatient from '../photo/doctore with women.webp';
+import dentistPatient from '../photo/with patient.jpeg';
 
 const PHONE = '+919960416690';
 const MAP_URL = 'https://www.google.com/maps/search/?api=1&query=Pro+Dental+Care+Pimple+Saudagar+Pune';
@@ -13,10 +17,10 @@ const photos = {
   room: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85',
 };
 const clinicPhotos = [
-  { src: '/photo/clinic counter.jpeg', alt: 'Reception counter at Pro Dental Care', label: 'A warm welcome' },
-  { src: '/photo/machine.jpeg', alt: 'Dental equipment at Pro Dental Care', label: 'Our care space' },
-  { src: '/photo/doctore with women.webp', alt: 'Dentist caring for a patient at Pro Dental Care', label: 'The people behind your care' },
-  { src: '/photo/with patient.jpeg', alt: 'Dentist with a patient at Pro Dental Care', label: 'Here for your smile' },
+  { src: clinicCounter, alt: 'Reception counter at Pro Dental Care', label: 'A warm welcome' },
+  { src: dentalMachine, alt: 'Dental equipment at Pro Dental Care', label: 'Our care space' },
+  { src: dentistWithPatient, alt: 'Dentist caring for a patient at Pro Dental Care', label: 'The people behind your care' },
+  { src: dentistPatient, alt: 'Dentist with a patient at Pro Dental Care', label: 'Here for your smile' },
 ];
 const services = [
   { number: '01', title: 'Root canal care', desc: 'Thoughtful treatment focused on relieving discomfort and preserving your natural tooth.', icon: Stethoscope },
@@ -112,7 +116,7 @@ function App() {
           {clinicPhotos.map((photo) => (
             <figure className="gallery-card" key={photo.src}>
               {unavailableClinicPhotos.has(photo.src)
-                ? <div className="gallery-placeholder"><span>Clinic photo</span><small>Add {photo.src.split('/').pop()} to the public/clinic-gallery folder</small></div>
+                ? <div className="gallery-placeholder"><span>Clinic photo</span><small>Image unavailable: {photo.alt}</small></div>
                 : <img src={photo.src} alt={photo.alt} loading="lazy" onError={() => setUnavailableClinicPhotos(current => new Set(current).add(photo.src))}/>}
               <figcaption>{photo.label}</figcaption>
             </figure>
